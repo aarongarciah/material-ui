@@ -63,8 +63,8 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-2d2cc042-20240809",
-    "react-dom": "19.0.0-rc-2d2cc042-20240809"
+    "react": "19.0.0-rc-49496d49-20240814",
+    "react-dom": "19.0.0-rc-49496d49-20240814"
   },
   "publishConfig": {
     "access": "public"
