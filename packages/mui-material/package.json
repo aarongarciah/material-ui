@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "csstype": "^3.1.3",
     "prop-types": "^15.8.1",
-    "react-is": "19.0.0-rc-1eaccd82-20240816",
+    "react-is": "19.0.0-rc-6ebfd5b0-20240818",
     "react-transition-group": "^4.4.5"
   },
   "description": "Material UI is an open-source React component library that implements Google's Material Design. It's comprehensive and can be used in production out of the box.",
@@ -37,8 +37,8 @@
     "fs-extra": "^11.2.0",
     "lodash": "^4.17.21",
     "playwright": "^1.46.1",
-    "react": "19.0.0-rc-1eaccd82-20240816",
-    "react-dom": "19.0.0-rc-1eaccd82-20240816",
+    "react": "19.0.0-rc-6ebfd5b0-20240818",
+    "react-dom": "19.0.0-rc-6ebfd5b0-20240818",
     "react-router-dom": "^6.26.1",
     "sinon": "^16.1.3"
   },
