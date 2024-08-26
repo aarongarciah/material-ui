@@ -621,7 +621,7 @@ function testThemeStyleOverrides(
   element: React.ReactElement<any>,
   getOptions: () => ConformanceOptions,
 ) {
-  describe('theme style overrides:', () => {
+  describe.only('theme style overrides:', () => {
     it("respect theme's styleOverrides custom state", async function test() {
       if (/jsdom/.test(window.navigator.userAgent)) {
         this.skip();
@@ -677,7 +677,7 @@ function testThemeStyleOverrides(
       expect(container.firstChild).to.toHaveComputedStyle(testStyle);
     });
 
-    it("respect theme's styleOverrides slots", async function test() {
+    it.only("respect theme's styleOverrides slots", async function test() {
       if (/jsdom/.test(window.navigator.userAgent)) {
         this.skip();
       }

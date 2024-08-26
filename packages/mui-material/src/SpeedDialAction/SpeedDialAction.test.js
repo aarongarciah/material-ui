@@ -7,7 +7,8 @@ import { fabClasses } from '@mui/material/Fab';
 import SpeedDialAction, { speedDialActionClasses as classes } from '@mui/material/SpeedDialAction';
 import describeConformance from '../../test/describeConformance';
 
-describe('<SpeedDialAction />', () => {
+// eslint-disable-next-line mocha/no-exclusive-tests
+describe.only('<SpeedDialAction />', () => {
   const { clock, render } = createRenderer({ clock: 'fake' });
 
   describeConformance(

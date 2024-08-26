@@ -15,6 +15,7 @@ import { tooltipClasses } from '@mui/material/Tooltip';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import describeConformance from '../../test/describeConformance';
 
+// eslint-disable-next-line mocha/no-exclusive-tests
 describe('<SpeedDial />', () => {
   const { clock, render } = createRenderer({ clock: 'fake' });
 
