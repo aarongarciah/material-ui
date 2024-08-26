@@ -3,8 +3,41 @@
   "version": "6.0.1",
   "private": false,
   "author": "MUI Team",
+  "description": "Material UI is an open-source React component library that implements Google's Material Design. It's comprehensive and can be used in production out of the box.",
+  "main": "./src/index.ts",
+  "keywords": [
+    "react",
+    "react-component",
+    "mui",
+    "material-ui",
+    "material design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mui/material-ui.git",
+    "directory": "packages/mui-material"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mui/material-ui/issues"
+  },
+  "homepage": "https://mui.com/material-ui/",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/mui-org"
+  },
+  "scripts": {
+    "build": "pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
+    "build:modern": "node ../../scripts/build.mjs modern",
+    "build:node": "node ../../scripts/build.mjs node",
+    "build:stable": "node ../../scripts/build.mjs stable",
+    "build:copy-files": "node ../../scripts/copyFiles.mjs",
+    "build:types": "node ../../scripts/buildTypes.mjs",
+    "prebuild": "rimraf build tsconfig.build.tsbuildinfo",
+    "release": "pnpm build && pnpm publish",
+    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/mui-material/**/*.test.{js,ts,tsx}'",
+    "typescript": "tsc -p tsconfig.json",
+    "typescript:module-augmentation": "node scripts/testModuleAugmentation.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.25.0",
@@ -20,7 +53,6 @@
     "react-is": "19.0.0-rc-b57d2823-20240822",
     "react-transition-group": "^4.4.5"
   },
-  "description": "Material UI is an open-source React component library that implements Google's Material Design. It's comprehensive and can be used in production out of the box.",
   "devDependencies": {
     "@mui/internal-babel-macros": "workspace:^",
     "@mui/internal-test-utils": "workspace:^",
@@ -42,23 +74,6 @@
     "react-router-dom": "^6.26.1",
     "sinon": "^16.1.3"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/mui-org"
-  },
-  "homepage": "https://mui.com/material-ui/",
-  "keywords": [
-    "react",
-    "react-component",
-    "mui",
-    "material-ui",
-    "material design"
-  ],
-  "license": "MIT",
-  "main": "./src/index.ts",
   "peerDependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
@@ -76,10 +91,15 @@
     },
     "@mui/material-pigment-css": {
       "optional": true
-    },
-    "@types/react": {
-      "optional": true
     }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "directory": "build"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "pigment-css": {
     "vite": {
@@ -92,28 +112,5 @@
         "@emotion/react"
       ]
     }
-  },
-  "publishConfig": {
-    "access": "public",
-    "directory": "build"
-  },
-  "repository": {
-    "directory": "packages/mui-material",
-    "type": "git",
-    "url": "https://github.com/mui/material-ui.git"
-  },
-  "scripts": {
-    "build": "pnpm build:modern && pnpm build:node && pnpm build:stable && pnpm build:types && pnpm build:copy-files",
-    "build:copy-files": "node ../../scripts/copyFiles.mjs",
-    "build:modern": "node ../../scripts/build.mjs modern",
-    "build:node": "node ../../scripts/build.mjs node",
-    "build:stable": "node ../../scripts/build.mjs stable",
-    "build:types": "node ../../scripts/buildTypes.mjs",
-    "prebuild": "rimraf build tsconfig.build.tsbuildinfo",
-    "release": "pnpm build && pnpm publish",
-    "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/mui-material/**/*.test.{js,ts,tsx}'",
-    "typescript": "tsc -p tsconfig.json",
-    "typescript:module-augmentation": "node scripts/testModuleAugmentation.js"
-  },
-  "sideEffects": false
+  }
 }
