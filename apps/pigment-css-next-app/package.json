@@ -19,8 +19,8 @@
     "@mui/system": "workspace:^",
     "@mui/utils": "workspace:^",
     "next": "latest",
-    "react": "19.0.0-rc-f65ac7bd-20240826",
-    "react-dom": "19.0.0-rc-f65ac7bd-20240826"
+    "react": "19.0.0-rc-5dcb0097-20240918",
+    "react-dom": "19.0.0-rc-5dcb0097-20240918"
   },
   "devDependencies": {
     "@pigment-css/nextjs-plugin": "0.0.23",

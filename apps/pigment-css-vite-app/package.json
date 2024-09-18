@@ -18,8 +18,8 @@
     "@mui/utils": "workspace:^",
     "@pigment-css/react": "^0.0.16",
     "clsx": "^2.1.1",
-    "react": "19.0.0-rc-f65ac7bd-20240826",
-    "react-dom": "19.0.0-rc-f65ac7bd-20240826",
+    "react": "19.0.0-rc-5dcb0097-20240918",
+    "react-dom": "19.0.0-rc-5dcb0097-20240918",
     "react-error-boundary": "^4.0.13",
     "react-router-dom": "^6.26.2",
     "webfontloader": "^1.6.28"
