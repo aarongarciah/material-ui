@@ -107,7 +107,9 @@ export default function DarkTheme() {
   return (
     <Box sx={{ width: '100%' }}>
       <ThemeProvider theme={darkTheme}>
-        <Demo />
+        <div>
+          <Demo />
+        </div>
       </ThemeProvider>
     </Box>
   );

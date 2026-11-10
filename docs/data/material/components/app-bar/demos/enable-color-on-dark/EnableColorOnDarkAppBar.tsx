@@ -30,17 +30,17 @@ const darkTheme = createTheme({
 
 export default function EnableColorOnDarkAppBar() {
   return (
-    <Stack spacing={2} sx={{ flexGrow: 1 }}>
-      {/* @focus-start */}
-      <ThemeProvider theme={darkTheme}>
+    // @focus-start
+    <ThemeProvider theme={darkTheme}>
+      <Stack spacing={2} sx={{ flexGrow: 1 }}>
         <AppBar position="static" color="primary" enableColorOnDark>
           {appBarLabel('enableColorOnDark')}
         </AppBar>
         <AppBar position="static" color="primary">
           {appBarLabel('default')}
         </AppBar>
-      </ThemeProvider>
-      {/* @focus-end */}
-    </Stack>
+      </Stack>
+    </ThemeProvider>
+    // @focus-end
   );
 }

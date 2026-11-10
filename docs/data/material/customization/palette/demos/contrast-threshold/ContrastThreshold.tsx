@@ -34,10 +34,14 @@ export default function ContrastThreshold() {
     <Stack direction="row" sx={{ gap: 4 }}>
       {/* @focus-start */}
       <ThemeProvider theme={defaultContrastThresholdTheme}>
-        <ContrastShowcase title="Default contrast threshold" />
+        <div>
+          <ContrastShowcase title="Default contrast threshold" />
+        </div>
       </ThemeProvider>
       <ThemeProvider theme={highContrastThresholdTheme}>
-        <ContrastShowcase title="Higher contrast threshold" />
+        <div>
+          <ContrastShowcase title="Higher contrast threshold" />
+        </div>
       </ThemeProvider>
       {/* @focus-end */}
     </Stack>

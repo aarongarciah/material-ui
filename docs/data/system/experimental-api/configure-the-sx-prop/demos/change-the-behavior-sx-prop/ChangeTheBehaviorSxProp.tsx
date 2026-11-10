@@ -28,14 +28,14 @@ const theme = createTheme({
 
 export default function ChangeTheBehaviorSxProp() {
   return (
-    <Stack direction="row" sx={{ gap: 1 }}>
-      {/* @focus-start */}
-      <ThemeProvider theme={theme}>
+    // @focus-start
+    <ThemeProvider theme={theme}>
+      <Stack direction="row" sx={{ gap: 1 }}>
         <Box sx={{ borderRadius: 'sm', border: 1, p: 4 }} />
         <Box sx={{ borderRadius: 'md', border: 1, p: 4 }} />
         <Box sx={{ borderRadius: 'lg', border: 1, p: 4 }} />
-      </ThemeProvider>
-      {/* @focus-end */}
-    </Stack>
+      </Stack>
+    </ThemeProvider>
+    // @focus-end
   );
 }

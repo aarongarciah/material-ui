@@ -42,13 +42,13 @@ export default function FontAwesomeIconSize() {
   }, []);
 
   return (
-    <Stack direction="row" spacing={2}>
-      {/* @focus-start */}
-      <ThemeProvider theme={theme}>
+    // @focus-start
+    <ThemeProvider theme={theme}>
+      <Stack direction="row" spacing={2}>
         <Chip icon={<MdPhone />} label="Call me" />
         <Chip icon={<Icon className="fas fa-phone-alt" />} label="Call me" />
-      </ThemeProvider>
-      {/* @focus-end */}
-    </Stack>
+      </Stack>
+    </ThemeProvider>
+    // @focus-end
   );
 }

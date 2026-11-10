@@ -58,7 +58,9 @@ export default function DarkThemeWithCustomPalette() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={darkModeTheme}>
-      <MyApp />
+      <div>
+        <MyApp />
+      </div>
     </ThemeProvider>
     // @focus-end
   );

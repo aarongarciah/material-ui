@@ -74,13 +74,19 @@ export default function TonalOffset() {
     <Stack direction={{ xs: 'column', sm: 'row' }} sx={{ gap: 8 }}>
       {/* @focus-start */}
       <ThemeProvider theme={defaultTonalOffsetTheme}>
-        <ColorShowcase title="Default tonal offset" color="primary" />
+        <div>
+          <ColorShowcase title="Default tonal offset" color="primary" />
+        </div>
       </ThemeProvider>
       <ThemeProvider theme={higherTonalOffsetTheme}>
-        <ColorShowcase title="Higher tonal offset" color="primary" />
+        <div>
+          <ColorShowcase title="Higher tonal offset" color="primary" />
+        </div>
       </ThemeProvider>
       <ThemeProvider theme={asymmetricTonalOffsetTheme}>
-        <ColorShowcase title="Asymmetric tonal offset" color="primary" />
+        <div>
+          <ColorShowcase title="Asymmetric tonal offset" color="primary" />
+        </div>
       </ThemeProvider>
       {/* @focus-end */}
     </Stack>

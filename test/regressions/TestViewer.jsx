@@ -2,7 +2,22 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import GlobalStyles from '@mui/material/GlobalStyles';
-import { StyledEngineProvider } from '@mui/material/styles';
+import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
+
+// The docs render each demo under the page's ThemeProvider, so a demo's own ThemeProvider is nested
+// and sets its CSS theme variables on its child instead of `:root`. Render the Material UI demos the same way.
+// The `regression-*` fixtures test root providers, the templates are full pages,
+// the marketing composites bring their own provider, and the System demos don't use the Material UI theme.
+const docsTheme = createTheme();
+
+function isNestedDemo(path) {
+  return (
+    path.startsWith('/docs-') &&
+    !path.startsWith('/docs-getting-started-templates-') &&
+    !path.startsWith('/docs-product-') &&
+    !path.startsWith('/docs-system-')
+  );
+}
 
 function TestViewer(props) {
   const { children, path } = props;
@@ -44,6 +59,17 @@ function TestViewer(props) {
     p: 1,
   };
 
+  const testcase = (
+    <Box
+      aria-busy={!ready}
+      data-testid="testcase"
+      data-testpath={path}
+      sx={{ bgcolor: 'background.default', ...viewerBoxSx }}
+    >
+      {children}
+    </Box>
+  );
+
   return (
     <StyledEngineProvider enableCssLayer>
       <GlobalStyles
@@ -66,14 +92,7 @@ function TestViewer(props) {
           },
         }}
       />
-      <Box
-        aria-busy={!ready}
-        data-testid="testcase"
-        data-testpath={path}
-        sx={{ bgcolor: 'background.default', ...viewerBoxSx }}
-      >
-        {children}
-      </Box>
+      {isNestedDemo(path) ? <ThemeProvider theme={docsTheme}>{testcase}</ThemeProvider> : testcase}
     </StyledEngineProvider>
   );
 }

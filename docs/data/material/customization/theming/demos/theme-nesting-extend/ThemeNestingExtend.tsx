@@ -15,23 +15,25 @@ export default function ThemeNestingExtend() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={outerTheme}>
-      <Checkbox defaultChecked color="secondary" />
-      <ThemeProvider
-        theme={(theme: Theme) =>
-          createTheme({
-            ...theme,
-            palette: {
-              ...theme.palette,
-              primary: {
-                main: green[500],
-              },
-            },
-          })
-        }
-      >
-        <Checkbox defaultChecked />
+      <div>
         <Checkbox defaultChecked color="secondary" />
-      </ThemeProvider>
+        <ThemeProvider
+          theme={(theme: Theme) =>
+            createTheme({
+              ...theme,
+              palette: {
+                ...theme.palette,
+                primary: {
+                  main: green[500],
+                },
+              },
+            })
+          }
+        >
+          <Checkbox defaultChecked />
+          <Checkbox defaultChecked color="secondary" />
+        </ThemeProvider>
+      </div>
     </ThemeProvider>
     // @focus-end
   );

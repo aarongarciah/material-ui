@@ -19,8 +19,10 @@ export default function Palette() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={theme}>
-      <Button>Primary</Button>
-      <Button color="secondary">Secondary</Button>
+      <div>
+        <Button>Primary</Button>
+        <Button color="secondary">Secondary</Button>
+      </div>
     </ThemeProvider>
     // @focus-end
   );

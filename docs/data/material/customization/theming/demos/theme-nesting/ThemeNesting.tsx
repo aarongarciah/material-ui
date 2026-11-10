@@ -22,10 +22,12 @@ export default function ThemeNesting() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={outerTheme}>
-      <Checkbox defaultChecked />
-      <ThemeProvider theme={innerTheme}>
+      <div>
         <Checkbox defaultChecked />
-      </ThemeProvider>
+        <ThemeProvider theme={innerTheme}>
+          <Checkbox defaultChecked />
+        </ThemeProvider>
+      </div>
     </ThemeProvider>
     // @focus-end
   );

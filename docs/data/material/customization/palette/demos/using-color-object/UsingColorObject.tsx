@@ -13,10 +13,12 @@ export default function UsingColorObject() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={theme}>
-      <Button variant="contained">Primary</Button>
-      <Button variant="contained" color="secondary" sx={{ ml: 2 }}>
-        Secondary
-      </Button>
+      <div>
+        <Button variant="contained">Primary</Button>
+        <Button variant="contained" color="secondary" sx={{ ml: 2 }}>
+          Secondary
+        </Button>
+      </div>
     </ThemeProvider>
     // @focus-end
   );

@@ -22,8 +22,10 @@ export default function OverrideCallbackCssBaseline() {
   return (
     // @focus-start @padding 2
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <h1>h1 element</h1>
+      <div>
+        <CssBaseline />
+        <h1>h1 element</h1>
+      </div>
     </ThemeProvider>
     // @focus-end
   );

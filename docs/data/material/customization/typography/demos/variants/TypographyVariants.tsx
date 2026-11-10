@@ -18,14 +18,14 @@ const theme = createTheme({
 
 export default function TypographyVariants() {
   return (
-    <div>
-      {/* @focus-start */}
-      <ThemeProvider theme={theme}>
+    // @focus-start
+    <ThemeProvider theme={theme}>
+      <div>
         <Typography variant="subtitle1">subtitle</Typography>
         <Typography>body1</Typography>
         <Button>Button</Button>
-      </ThemeProvider>
-      {/* @focus-end */}
-    </div>
+      </div>
+    </ThemeProvider>
+    // @focus-end
   );
 }
