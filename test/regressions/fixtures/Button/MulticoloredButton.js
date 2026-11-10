@@ -31,7 +31,7 @@ export default function MulticoloredButton() {
           </Button>
         </Box>
       </ThemeProvider>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={darkTheme} scoped>
         <Box
           sx={{
             display: 'flex',
