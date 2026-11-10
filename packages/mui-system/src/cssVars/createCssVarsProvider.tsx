@@ -534,8 +534,7 @@ export default function createCssVarsProvider<
       ],
     );
 
-    const canGenerateStyleSheet =
-      !disableStyleSheetGeneration && restThemeProp.cssVariables !== false;
+    const canGenerateStyleSheet = !disableStyleSheetGeneration;
     const samePrefixAsUpper = nested && (upperTheme as any)?.cssVarPrefix === cssVarPrefix;
 
     // 6. Scope the CSS theme variables that can't go to `:root` to the provider's child.
