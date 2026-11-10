@@ -125,6 +125,10 @@ You can extend the outer theme by providing a function:
 
 {{"component": "file://./demos/theme-nesting-extend/index.ts"}}
 
+With CSS theme variables, a nested theme whose variables differ from the outer theme sets them on its child element, so the child has to be a single element.
+This doesn't apply to a theme passed as a function, which still uses the outer theme's CSS variables.
+See [Nested and multiple theme providers](/material-ui/customization/css-theme-variables/configuration/#nested-and-multiple-theme-providers) for details.
+
 ## CSS theme variables
 
 `createTheme()` always generates CSS variables from the theme. Pass the theme to the `ThemeProvider`:
